@@ -1,38 +1,50 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h2 {
+  font-size: 50px;
+  font-weight: 500;
+}
+.hero h4 {
+  font-size: 30px;
+  font-weight: 300;
+  width: 50%;
+}
+.hero button {
+  border: none;
+  height: 50px;
+  width: 150px;
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 8px;
+
+  background-color: #ffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.hero button:hover {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 700px) {
+  .hero h4 {
+    font-size: 20px;
+    font-weight: 300;
+    width: 100%;
   }
 }

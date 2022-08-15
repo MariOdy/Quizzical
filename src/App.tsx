@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import Quiz from "./components/Quiz";
 
-function App() {
+const App: React.FC = () => {
+  const [playGame, setPlayGame] = useState(false);
+  const handleClick = () => {
+    setPlayGame((prev) => !prev);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {playGame ? (
+        <Quiz />
+      ) : (
+        <div className="hero">
+          <h2>Quizzical</h2>
+          <h4>
+            Here is a quiz, you will need to choose only 1 answer.
+            <br />
+            The questions will be on completely different topics, but don't
+            worry, at the end you can find out the correct answer 😉
+          </h4>
+          <button onClick={handleClick}>Play game!</button>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
