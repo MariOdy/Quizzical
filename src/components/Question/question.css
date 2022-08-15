@@ -57,13 +57,16 @@
   .quiz-question {
     justify-content: center;
     text-align: center;
+    padding: 0;
   }
   .quiz-all-answers {
     flex-direction: column;
     align-items: center;
+    gap: 16px;
   }
   .quiz-question-answer {
     width: 100%;
+    align-items: stretch;
   }
   .quiz-question--label {
     font-weight: 500;
